@@ -14,7 +14,7 @@ const Signup = () => {
 
   const handleSignup = async () => {
     try {
-      await axios.post('http://localhost:3000/api/instructor/signup', { name, username, password });
+      await axios.post('https://zany-teal-pelican-wear.cyclic.app/api/instructor/signup', { name, username, password });
     //   console.log('Signup successful');
       navigate('/')
     } catch (error) {

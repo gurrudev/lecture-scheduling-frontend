@@ -16,7 +16,7 @@ const Home = () => {
 
     const userSchedule = async () => {
         try {
-            const response = await axios.get(`http://localhost:3000/api/instructor/schedule/${obj._id}`);
+            const response = await axios.get(`https://zany-teal-pelican-wear.cyclic.app/api/instructor/schedule/${obj._id}`);
             setData(response.data.scheduledDetails); // assuming the array is nested under 'scheduledDetails'
             // console.log(response.data);
         } catch (err) {

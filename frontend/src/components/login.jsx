@@ -16,7 +16,7 @@ const Login = () => {
         try {
             if (username === 'admin' && password === 'admin') navigate('/admin')
 
-            const response = await axios.post('http://localhost:3000/api/instructor/signin', { username, password });
+            const response = await axios.post('https://zany-teal-pelican-wear.cyclic.app/api/instructor/signin', { username, password });
             localStorage.setItem('user', JSON.stringify(response.data.instructor))
             navigate('/home')
             console.log(response.data.instructor);

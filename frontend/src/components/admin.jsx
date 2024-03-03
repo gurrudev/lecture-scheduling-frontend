@@ -22,7 +22,7 @@ const Admin = () => {
 
     const getUsers = async () => {
         try {
-            const usr = await axios.get('http://localhost:3000/api/istructor/all')
+            const usr = await axios.get('https://zany-teal-pelican-wear.cyclic.app/api/istructor/all')
             setUsers(usr.data.instructors)
         } catch (error) {
             console.log(error)
@@ -33,7 +33,7 @@ const Admin = () => {
     const handleAdd = async()=>{
         
         try {
-           const res = await axios.post('http://localhost:3000/api/admin/add-course',{
+           const res = await axios.post('https://zany-teal-pelican-wear.cyclic.app/api/admin/add-course',{
             name: course,
             level: level,
             description: description,
