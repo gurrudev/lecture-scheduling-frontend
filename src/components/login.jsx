@@ -14,11 +14,15 @@ const Login = () => {
 
     const handleLogin = async () => {
         try {
-            if (username === 'admin' && password === 'admin') navigate('/admin')
+            if (username === 'admin' && password === 'admin'){
+                navigate('/admin')
+                toast.success('Login Successfull!')
+            } 
 
             const response = await axios.post('https://zany-teal-pelican-wear.cyclic.app/api/instructor/signin', { username, password });
             localStorage.setItem('user', JSON.stringify(response.data.instructor))
             navigate('/home')
+            toast.success('Login Successfull!')
             console.log(response.data.instructor);
         } catch (error) {
             toast.error('Invalid Credentials!');
